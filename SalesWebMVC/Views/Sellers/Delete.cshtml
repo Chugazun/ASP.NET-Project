@@ -1,0 +1,55 @@
+﻿@model Seller
+@{
+    ViewData["Title"] = "Delete";
+}
+<style>
+    dt {
+        float: left;
+        clear: left;
+        margin-right: 5px;
+        font-weight: bold;
+    }
+
+    dd {
+        margin-left: 0px;
+    }
+</style>
+
+<h1>Confirmation</h1>
+<hr />
+<h4 style="margin-bottom:20px">Seller Info.</h4>
+<div>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name): 
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email): 
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate): 
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseSalary): 
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BaseSalary)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index">Back to List.</a>
+    </form>
+</div>
+
