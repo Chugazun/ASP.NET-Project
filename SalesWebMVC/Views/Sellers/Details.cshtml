@@ -1,0 +1,61 @@
+﻿@model Seller
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    dt {
+        float: left;
+        clear: left;
+        margin-right: 5px;
+        font-weight: bold;
+    }
+
+    dd {
+        margin-left: 0px;
+    }
+</style>
+
+<h1>Details</h1>
+<hr />
+<h4 style="margin-bottom:20px">Seller Info.</h4>
+<div>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name):
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email):
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate):
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseSalary):
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BaseSalary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Department):
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Department.Name)
+        </dd>
+    </dl>
+</div>
+<div style="margin-top:20px">
+    <a asp-action="Edit" asp-route-id="Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" style="margin-left:10px">Back to List.</a>
+</div>
+
